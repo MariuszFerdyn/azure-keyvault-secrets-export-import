@@ -1,4 +1,4 @@
-# Azure KeyVault Secret Migration Tool
+# Azure KeyVault Secrets Migration Tool (export/import)
 
 A PowerShell-based solution for exporting and importing secrets from Azure KeyVault, preserving all properties and version history. This tool is especially useful for migrating KeyVault secrets between tenants or environments.
 
