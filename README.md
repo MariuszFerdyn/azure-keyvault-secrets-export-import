@@ -61,13 +61,13 @@ To import secrets to a KeyVault:
 Connect-AzAccount -SubscriptionId "your-target-subscription-id"
 
 # Import all secrets
-.\Import-KeyVaultSecrets.ps1 -KeyVaultName "target-keyvault-name" -InputFilePath "path\to\exported-secrets.json"
+.\KV-Secrets-Import.ps1 -KeyVaultName "target-keyvault-name" -InputFilePath "path\to\exported-secrets.json"
 
 # Skip existing secrets (don't create new versions for secrets that exist)
-.\Import-KeyVaultSecrets.ps1 -KeyVaultName "target-keyvault-name" -InputFilePath "path\to\exported-secrets.json" -SkipExisting
+.\KV-Secrets-Import.ps1 -KeyVaultName "target-keyvault-name" -InputFilePath "path\to\exported-secrets.json" -SkipExisting
 
 # Show detailed output for troubleshooting
-.\Import-KeyVaultSecrets.ps1 -KeyVaultName "target-keyvault-name" -InputFilePath "path\to\exported-secrets.json" -DetailedOutput
+.\KV-Secrets-Import.ps1 -KeyVaultName "target-keyvault-name" -InputFilePath "path\to\exported-secrets.json" -DetailedOutput
 ```
 
 ## Security Considerations
