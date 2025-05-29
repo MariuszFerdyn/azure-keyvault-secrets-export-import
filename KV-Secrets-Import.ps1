@@ -1,4 +1,3 @@
-﻿# Import-KeyVaultSecrets.ps1
 # Script to import secrets into an Azure KeyVault in chronological order (oldest first),
 # including name, value, content type, activation date, expiration date, and tags
 #
