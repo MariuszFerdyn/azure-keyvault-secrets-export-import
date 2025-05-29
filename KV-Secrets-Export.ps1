@@ -1,4 +1,3 @@
-﻿# Export-KeyVaultSecrets.ps1
 # Script to export all secrets from an Azure KeyVault including all versions,
 # with name, value, content type, activation date, expiration date, and tags
 #
@@ -16,11 +15,16 @@ param(
     [string]$KeyVaultName,
     
     [Parameter(Mandatory = $false)]
-    [string]$OutputFilePath = ".\KeyVaultSecrets_$KeyVaultName.json",
+    [string]$OutputFilePath,
     
     [Parameter(Mandatory = $false)]
     [switch]$IncludeAllVersions = $true
 )
+
+# Set default value if not provided
+if (-not $OutputFilePath) {
+    $OutputFilePath = ".\KeyVaultSecrets_$KeyVaultName.json"
+}
 
 # Check if user is logged in to Azure
 $context = Get-AzContext
