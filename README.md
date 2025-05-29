@@ -43,13 +43,13 @@ To export all secrets from a KeyVault:
 Connect-AzAccount -SubscriptionId "your-source-subscription-id"
 
 # Export all secrets with all versions
-.\Export-KeyVaultSecrets.ps1 -KeyVaultName "source-keyvault-name"
+.\KV-Secrets-Export.ps1 -KeyVaultName "source-keyvault-name"
 
 # Export to a specific file
-.\Export-KeyVaultSecrets.ps1 -KeyVaultName "source-keyvault-name" -OutputFilePath "C:\path\to\export-file.json"
+.\KV-Secrets-Export.ps1 -KeyVaultName "source-keyvault-name" -OutputFilePath "C:\path\to\export-file.json"
 
 # Export only current versions (not recommended for migration)
-.\Export-KeyVaultSecrets.ps1 -KeyVaultName "source-keyvault-name" -IncludeAllVersions:$false
+.\KV-Secrets-Export.ps1 -KeyVaultName "source-keyvault-name" -IncludeAllVersions:$false
 ```
 
 ### Importing Secrets
